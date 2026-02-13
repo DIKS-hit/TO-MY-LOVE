@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love, Diksha 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Custom Cursor Trail -->
+    <div id="cursorTrail"></div>
+
+    <!-- Page 1: Welcome/Lock Screen -->
+    <section id="page1" class="page active">
+        <div class="header">To My Love, Diksha</div>
+        <div class="content-center">
+            <div class="animated-heart"></div>
+            <h1 class="main-title">Something special is waiting for you...</h1>
+            <div id="countdown" class="countdown">
+                <div class="countdown-text">Valentine's Day in:</div>
+                <div class="countdown-timer">
+                    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+            </div>
+            <button id="unlockBtn" class="next-btn locked">
+                <span class="lock-icon">🔒</span> Next
+            </button>
+            <div id="waitMessage" class="wait-message hidden">
+                Wait a little longer baby, Valentine's Day hasn't arrived yet 💕
+            </div>
+        </div>
+        <div class="floating-hearts"></div>
+        <div class="signature">Made with infinite love ∞</div>
+    </section>
+
+    <!-- Page 2: First Meeting (31 March 2020) -->
+    <section id="page2" class="page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 1 of 11</div>
+        <div class="content-center">
+            <div class="moment-card">
+                <div class="instagram-icon">📱</div>
+                <div class="date">31st March 2020</div>
+                <h2 class="card-title">Where It All Began</h2>
+                <p class="card-text">Two strangers became friends on Instagram. Little did we know, this was the start
+                    of forever...</p>
+                <div class="time-ago" data-date="2020-03-31"></div>
+            </div>
+            <button class="next-btn" onclick="nextPage(3)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 3: The Confession Night (15 Dec 2022) -->
+    <section id="page3" class="page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 2 of 11</div>
+        <div class="content-center">
+            <h2 class="card-title night-title">The Night Everything Changed</h2>
+            <div class="date">15th December 2022</div>
+            <div class="time-ago" data-date="2022-12-15"></div>
+
+            <!-- Empty chat container - will be filled by JavaScript -->
+            <div class="chat-container" id="chatContainer">
+            </div>
+
+            <button class="next-btn" onclick="nextPage(4)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 4: The Heartbreak (Late Dec 2022) -->
+    <section id="page4" class="page heartbreak-page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 3 of 11</div>
+        <div class="rain-container"></div>
+        <div class="content-center">
+            <div class="moment-card sad-card">
+                <div class="date">Late December 2022</div>
+                <h2 class="card-title">When Everything Fell Apart</h2>
+                <p class="card-text">Sometimes love needs to break before it can truly heal. When I learned the truth,
+                    my world stopped...</p>
+                <div class="time-ago" data-date="2022-12-25"></div>
+                <div class="broken-heart"></div>
+            </div>
+            <button class="next-btn" onclick="nextPage(5)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 5: The Sorry (29 Dec 2022) -->
+    <section id="page5" class="page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 4 of 11</div>
+        <div class="content-center">
+            <div class="moment-card">
+                <div class="date">29th December 2022</div>
+                <h2 class="card-title">A Second Chance</h2>
+                <p class="card-text">You said sorry, but trust was still broken. Little did I know, something real was
+                    about to begin...</p>
+                <div class="time-ago" data-date="2022-12-29"></div>
+                <div class="clouds-parting"></div>
+            </div>
+            <button class="next-btn" onclick="nextPage(6)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 6: True Love Confession (6 Jan 2023) -->
+    <section id="page6" class="page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 5 of 11</div>
+        <div class="content-center">
+            <div class="moment-card love-card">
+                <div class="date">6th January 2023</div>
+                <h2 class="card-title">The Day Love Became Real</h2>
+                <p class="card-text">This time, it was different. This time, it was true. "I really love you now," you
+                    said. And I believed you.</p>
+                <div class="time-ago" data-date="2023-01-06"></div>
+                <div class="healing-hearts"></div>
+            </div>
+            <button class="next-btn" onclick="nextPage(7)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 7: The Wish (20 Jan 2024) -->
+    <section id="page7" class="page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 6 of 11</div>
+        <div class="content-center">
+            <div class="moment-card">
+                <div class="date">20th January 2024</div>
+                <h2 class="card-title">Dreams Come True</h2>
+                <p class="card-text">You said you wanted to meet me, to kiss me. Our hearts were ready to become one...
+                </p>
+                <div class="time-ago" data-date="2024-01-20"></div>
+                <div class="merging-hearts"></div>
+            </div>
+            <button class="next-btn" onclick="nextPage(8)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 8: First Meeting (16-19 March 2024) -->
+    <section id="page8" class="page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 7 of 11</div>
+        <div class="content-center">
+            <div class="moment-card special-card">
+                <div class="date">16th - 19th March 2024</div>
+                <h2 class="card-title">Our First Embrace</h2>
+                <p class="card-text">The best quality time of our lives. Three days that felt like forever.</p>
+                <div class="time-ago" data-date="2024-03-16"></div>
+                <div class="gift-box" id="giftBox">
+                    <div class="gift-lid"></div>
+                    <div class="gift-base"></div>
+                    <div class="mangalsutra hidden">
+                        <div class="maala">💍</div>
+                        <p class="promise-text">A promise of forever</p>
+                    </div>
+                </div>
+            </div>
+            <button class="next-btn" onclick="nextPage(9)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 9: Birthday Surprise (16-18 June 2024) -->
+    <section id="page9" class="page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 8 of 11</div>
+        <div class="content-center">
+            <div class="moment-card">
+                <div class="date">16th - 18th June 2024</div>
+                <h2 class="card-title">The Birthday You Slept Through</h2>
+                <div class="time-ago" data-date="2024-06-16"></div>
+                <div class="clock-animation">
+                    <div class="clock-time">11:59 PM</div>
+                    <div class="clock-arrow">→</div>
+                    <div class="clock-time">12:00 AM</div>
+                    <div class="clock-arrow">→</div>
+                    <div class="clock-time">1:00 AM</div>
+                </div>
+                <div class="sleeping-emoji">😴</div>
+                <p class="card-text">You planned to wake me at midnight, but sleepyhead yourself dozed off!</p>
+                <div class="watch-gift" id="watchGift">
+                    <div class="watch">⌚</div>
+                    <p class="gift-text">Time stands still with you</p>
+                </div>
+                <p class="subtitle">3 days, 2 nights of pure bliss</p>
+            </div>
+            <button class="next-btn" onclick="nextPage(10)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 10: Intimate Moment (19-22 Dec 2024) -->
+    <section id="page10" class="page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 9 of 11</div>
+        <div class="content-center">
+            <div class="moment-card locked-card" id="lockedCard">
+                <div class="date">19th - 22nd December 2024</div>
+                <h2 class="card-title">A Memory Just Ours</h2>
+                <div class="time-ago" data-date="2024-12-19"></div>
+                <div class="lock-container" id="lockContainer">
+                    <div class="keyhole">🔐</div>
+                    <p class="lock-text">Click to unlock our special moment</p>
+                </div>
+                <div class="unlocked-content hidden" id="unlockedContent">
+                    <div class="rose-petals"></div>
+                    <p class="card-text intimate-text">The saree, the moment, the magic... Some memories are treasured
+                        in silence 💕</p>
+                </div>
+            </div>
+            <button class="next-btn" onclick="nextPage(11)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 11: Recent Memory (8 July 2025) -->
+    <section id="page11" class="page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 10 of 11</div>
+        <div class="content-center">
+            <div class="moment-card">
+                <div class="date">8th July 2025</div>
+                <h2 class="card-title">Neelam Hotel - Quality Time</h2>
+                <p class="card-text">Another beautiful chapter in our never-ending story. Every moment with you is a
+                    treasure.</p>
+                <div class="time-ago" data-date="2025-07-08"></div>
+                <div class="hotel-hearts"></div>
+            </div>
+            <button class="next-btn" onclick="nextPage(12)">Next →</button>
+        </div>
+        <div class="signature">Forever yours 💕</div>
+    </section>
+
+    <!-- Page 12: The Proposal (Final Page) -->
+    <section id="page12" class="page proposal-page">
+        <div class="header">To My Love, Diksha</div>
+        <div class="progress">Chapter 11 of 11 - Forever</div>
+        <div class="content-center">
+            <div class="proposal-container">
+                <h1 class="proposal-name">Diksha...</h1>
+                <div class="roses-container" id="rosesContainer"></div>
+                <div class="proposal-text">
+                    <p class="proposal-line">Through every moment...</p>
+                    <p class="proposal-line">Every laugh, every tear...</p>
+                    <p class="proposal-line">Every promise, every dream...</p>
+                    <p class="proposal-line">You've been my everything</p>
+                </div>
+                <h2 class="big-question">Will you be my FOREVER Valentine? 💕</h2>
+                <div class="buttons-container">
+                    <button class="yes-btn" id="yesBtn">YES! 💖</button>
+                    <button class="no-btn" id="noBtn">No</button>
+                </div>
+                <div class="celebration hidden" id="celebration">
+                    <div class="fireworks"></div>
+                    <div class="confetti"></div>
+                    <div class="floating-hearts-up"></div>
+                </div>
+                <div class="love-letter hidden" id="loveLetter">
+                    <div class="envelope" id="envelope">
+                        <div class="wax-seal">❤️</div>
+                        <div class="envelope-flap"></div>
+                    </div>
+                    <div class="letter hidden" id="letter">
+                        <h3>My Dearest Diksha,</h3>
+                        <p>From that first Instagram message to this very moment, every second with you has been a
+                            blessing.</p>
+                        <p>You are my best friend, my soulmate, my everything.</p>
+                        <p>Here's to forever together.</p>
+                        <p>I love you more than words can ever say.</p>
+                        <p class="letter-closing">Happy Valentine's Day, my love.</p>
+                        <p class="letter-signature">Forever yours,<br>Rohit 💕</p>
+                    </div>
+                    <div class="final-counter hidden" id="finalCounter">
+                        <div class="counter-text">
+                            <span id="yearsCount"></span> years, <span id="monthsCount"></span> months, <span
+                                id="daysCount"></span> days together
+                        </div>
+                        <div class="heartbeat-count">
+                            That's <span id="heartbeatsCount"></span> heartbeats shared 💓
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="signature final-signature">Made with infinite love for Diksha ∞</div>
+
+        <!-- Button to Memories Page -->
+        <div class="memories-button-container">
+            <button class="memories-btn" onclick="window.location.href='memories.html'">
+                View Our Memories 💕
+            </button>
+        </div>
+    </section>
+
+    <!-- Easter Egg Elements -->
+    <div id="easterEggMessage" class="easter-egg-message hidden"></div>
+    <div id="secretHearts" class="secret-hearts"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
